@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Danh sách Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .video-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .video-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 10px;
+    }
+    iframe, video {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+    .title {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+
+<script data-cfasync="false" async src="https://cdn.amon1.net/js/pu/c.js#zid=155788"></script>
+  
+<script>
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function (e) {
+
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+
+
+
+function isInIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+}
+
+</script>
+
+		
+	  <script>
+
+var url = location.href;
+
+
+
+
+var sex1 = gup('sex', url);
+
+	
+
+
+
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+		
+
+        </script>
+
+
+</head>
+
+
+<body>
+
+<div style="display:none;">
+
+<iframe src="" height="768" width="1366" ></iframe>
+
+
+</div>
+
+
+  <h1>Danh sách Video của tôi</h1>
+
+  <div class="video-list">
+    <div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+	<div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+	<div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+	<div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+	<div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+	<div class="video-item">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="title">Video từ YouTube</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
